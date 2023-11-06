@@ -1,0 +1,7 @@
+{
+  "name": "war_20210160",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
