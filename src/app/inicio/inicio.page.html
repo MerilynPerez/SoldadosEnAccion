@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ isEditing ? 'Editar Elemento' : 'Agregar Elemento' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Título</ion-label>
+    <ion-input [(ngModel)]="item.title" placeholder="Título"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Fecha</ion-label>
+    <ion-input type="date" [(ngModel)]="item.date"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Descripción</ion-label>
+    <ion-textarea [(ngModel)]="item.description" placeholder="Descripción"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Foto</ion-label>
+    <ion-input [(ngModel)]="item.photo" placeholder="URL de la Foto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Audio</ion-label>
+    <ion-input [(ngModel)]="item.audio" placeholder="URL del Audio"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="saveItem()">
+    {{ isEditing ? 'Guardar Cambios' : 'Agregar Elemento' }}
+  </ion-button>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Detalle del Elemento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{ item.title }}
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Fecha:</strong> {{ item.date }}</p>
+      <p><strong>Descripción:</strong> {{ item.description }}</p>
+      <ion-img [src]="item.photo" *ngIf="item.photo" [alt]="item.title"></ion-img>
+      <audio controls *ngIf="item.audio">
+        <source [src]="item.audio" type="audio/mpeg">
+        Tu navegador no admite la reproducción de audio.
+      </audio>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
